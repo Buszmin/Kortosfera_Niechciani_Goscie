@@ -19,7 +19,9 @@ public class BacteriaGood : Bacteria
         if (collision.tag == "Outline")
         {
             Die();
-            Instantiate(plusPointsPrefab).transform.position = transform.position;
+            GameObject point = Instantiate(plusPointsPrefab);
+            point.transform.position = transform.position;
+            point.GetComponent<Points>().Init(15);
             spriteRenderer.sprite = hitSprite;
         }
     }

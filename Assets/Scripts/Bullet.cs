@@ -6,10 +6,14 @@ public class Bullet : MonoBehaviour
 {
     [SerializeField, Range(0, 0.1f)] private float speed = 0.1f;
 
+    private void Start()
+    {
+        StartCoroutine(waitToDestory());
+    }
+
     void FixedUpdate()
     {
         transform.position = transform.position + Vector3.up * speed;
-        StartCoroutine(waitToDestory());
     }
 
     IEnumerator waitToDestory()

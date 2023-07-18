@@ -86,7 +86,7 @@ SpriteRenderer:
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
+  m_MaskInteraction: 1
   m_SpriteSortPoint: 0
 --- !u!60 &5950652584880521538
 PolygonCollider2D:
@@ -233,12 +233,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0.01
-  finishLineY: -0.3
+  finishLineY: -1
   baseSprite: {fileID: 21300000, guid: 7a0fc1ea1443ebb45a5e4c8912fdde60, type: 3}
   hitSprite: {fileID: 21300000, guid: 4fa6cbe52d88404478f3e427f103f414, type: 3}
   plusPointsPrefab: {fileID: 6032172154609810050, guid: d8f5564344b04cc4eac333c91012cad8, type: 3}
   minusPointsPrefab: {fileID: 225773478871733716, guid: b71f61259eb4a2646852c4e3d0313da1, type: 3}
   health: 2
+  big: 0
 --- !u!111 &5950652584880521541
 Animation:
   m_ObjectHideFlags: 0

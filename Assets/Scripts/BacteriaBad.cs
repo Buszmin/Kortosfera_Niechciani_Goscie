@@ -5,6 +5,7 @@ using UnityEngine;
 public class BacteriaBad : Bacteria
 {
     [SerializeField] private int health;
+    [SerializeField] private bool big;
 
     protected override void Start()
     {
@@ -19,7 +20,16 @@ public class BacteriaBad : Bacteria
     protected override void TouchFinishLine()
     {
         Debug.Log("Punkty minusowe");
-        Instantiate(minusPointsPrefab).transform.position = transform.position;
+        GameObject point = Instantiate(minusPointsPrefab);
+        point.transform.position = transform.position;
+        if (big)
+        {
+            point.GetComponent<Points>().Init(-10);
+        }
+        else
+        {
+            point.GetComponent<Points>().Init(-5);
+        }
         Die();
     }
 
@@ -33,7 +43,17 @@ public class BacteriaBad : Bacteria
             if (health <= 0)
             {
                 Die();
-                Instantiate(plusPointsPrefab).transform.position = transform.position;
+                GameObject point = Instantiate(plusPointsPrefab);
+                point.transform.position = transform.position;
+
+                if (big)
+                {
+                    point.GetComponent<Points>().Init(10);
+                }
+                else
+                {
+                    point.GetComponent<Points>().Init(5);
+                }
             }
             StartCoroutine(changeToNormalSprite());
         }

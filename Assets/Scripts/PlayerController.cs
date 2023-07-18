@@ -8,6 +8,7 @@ public class PlayerController : MonoBehaviour
     [Header("Movement")]
     [SerializeField, Range(0,0.1f) ] private float speed;
     [SerializeField] private float movmentRange;
+    private Vector3 startPos;
 
     [Header("Shooting")]
     [SerializeField] private GameObject bulletPrefab;
@@ -21,7 +22,14 @@ public class PlayerController : MonoBehaviour
 
     void Start()
     {
-        
+        startPos = transform.position;
+    }
+
+    private void OnEnable()
+    {
+        transform.position = new Vector3 (startPos.x, transform.position.y, transform.position.z);
+        canShoot = true;
+        canCollect = true;
     }
 
     void FixedUpdate()

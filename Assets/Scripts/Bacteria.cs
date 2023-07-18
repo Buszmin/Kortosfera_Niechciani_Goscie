@@ -14,6 +14,7 @@ public class Bacteria : MonoBehaviour
     protected Collider2D collider;
     protected Animation DieAnim;
     bool behindFinishLine;
+    protected bool died;
 
     protected virtual void Start()
     {
@@ -27,7 +28,7 @@ public class Bacteria : MonoBehaviour
     {
         transform.position = transform.position + Vector3.down * speed;
 
-        if (transform.position.y < finishLineY && !behindFinishLine)
+        if (transform.position.y < finishLineY && !behindFinishLine && !died)
         {
             behindFinishLine = true;
             TouchFinishLine();
@@ -36,6 +37,7 @@ public class Bacteria : MonoBehaviour
 
     protected void Die()
     {
+        died = true;
         collider.enabled = false;
         DieAnim.Play(DieAnim.clip.name);
         StartCoroutine(waitToDestory());
