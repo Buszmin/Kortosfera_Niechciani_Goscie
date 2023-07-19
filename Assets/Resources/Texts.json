@@ -1,0 +1,464 @@
+{
+  "categories": [
+    {
+      "name": "Katastrofy",
+      "variables": [
+        {
+          "name": "Owady",
+          "values": [
+            {
+              "text": "Lorem ipsum",
+              "css": "",
+              "lang": "pl"
+            },
+            {
+              "text": "Lorem ipsum",
+              "css": "",
+              "lang": "en"
+            }
+          ]
+        },
+        {
+          "name": "Przymrozki",
+          "values": [
+            {
+              "text": "Lorem ipsum",
+              "css": "",
+              "lang": "pl"
+            },
+            {
+              "text": "Lorem ipsum",
+              "css": "",
+              "lang": "en"
+            }
+          ]
+        },
+        {
+          "name": "Rok piąty",
+          "values": [
+            {
+              "text": "Lorem ipsum",
+              "css": "",
+              "lang": "pl"
+            },
+            {
+              "text": "Lorem ipsum",
+              "css": "",
+              "lang": "en"
+            }
+          ]
+        },
+        {
+          "name": "Rok pierwszy",
+          "values": [
+            {
+              "text": "Lorem ipsum",
+              "css": "",
+              "lang": "pl"
+            },
+            {
+              "text": "Lorem ipsum",
+              "css": "",
+              "lang": "en"
+            }
+          ]
+        },
+        {
+          "name": "Rok trzeci",
+          "values": [
+            {
+              "text": "Lorem ipsum",
+              "css": "",
+              "lang": "pl"
+            },
+            {
+              "text": "Lorem ipsum",
+              "css": "",
+              "lang": "en"
+            }
+          ]
+        },
+        {
+          "name": "Susza",
+          "values": [
+            {
+              "text": "Lorem ipsum",
+              "css": "",
+              "lang": "pl"
+            },
+            {
+              "text": "Lorem ipsum",
+              "css": "",
+              "lang": "en"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Menu",
+      "variables": [
+        {
+          "name": "Tytuł",
+          "values": [
+            {
+              "text": "Lorem ipsum",
+              "css": "",
+              "lang": "pl"
+            },
+            {
+              "text": "Lorem ipsum",
+              "css": "",
+              "lang": "en"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Strona1",
+      "variables": [
+        {
+          "name": "Nagłówek",
+          "values": [
+            {
+              "text": "Lorem ipsum",
+              "css": "",
+              "lang": "pl"
+            },
+            {
+              "text": "Lorem ipsum",
+              "css": "",
+              "lang": "en"
+            }
+          ]
+        },
+        {
+          "name": "Start",
+          "values": [
+            {
+              "text": "Lorem ipsum",
+              "css": "",
+              "lang": "pl"
+            },
+            {
+              "text": "Lorem ipsum",
+              "css": "",
+              "lang": "en"
+            }
+          ]
+        },
+        {
+          "name": "Właściwość1",
+          "values": [
+            {
+              "text": "Lorem ipsum",
+              "css": "",
+              "lang": "pl"
+            },
+            {
+              "text": "Lorem ipsum",
+              "css": "",
+              "lang": "en"
+            }
+          ]
+        },
+        {
+          "name": "Właściwość2",
+          "values": [
+            {
+              "text": "Lorem ipsum",
+              "css": "",
+              "lang": "pl"
+            },
+            {
+              "text": "Lorem ipsum",
+              "css": "",
+              "lang": "en"
+            }
+          ]
+        },
+        {
+          "name": "Właściwość3",
+          "values": [
+            {
+              "text": "Lorem ipsum",
+              "css": "",
+              "lang": "pl"
+            },
+            {
+              "text": "Lorem ipsum",
+              "css": "",
+              "lang": "en"
+            }
+          ]
+        },
+        {
+          "name": "Właściwość4",
+          "values": [
+            {
+              "text": "Lorem ipsum",
+              "css": "",
+              "lang": "pl"
+            },
+            {
+              "text": "Lorem ipsum",
+              "css": "",
+              "lang": "en"
+            }
+          ]
+        },
+        {
+          "name": "Właściwość5",
+          "values": [
+            {
+              "text": "Lorem ipsum",
+              "css": "",
+              "lang": "pl"
+            },
+            {
+              "text": "Lorem ipsum",
+              "css": "",
+              "lang": "en"
+            }
+          ]
+        },
+        {
+          "name": "Właściwość6",
+          "values": [
+            {
+              "text": "Lorem ipsum",
+              "css": "",
+              "lang": "pl"
+            },
+            {
+              "text": "Lorem ipsum",
+              "css": "",
+              "lang": "en"
+            }
+          ]
+        },
+        {
+          "name": "Zasada1",
+          "values": [
+            {
+              "text": "Lorem ipsum",
+              "css": "",
+              "lang": "pl"
+            },
+            {
+              "text": "Lorem ipsum",
+              "css": "",
+              "lang": "en"
+            }
+          ]
+        },
+        {
+          "name": "Zasada2",
+          "values": [
+            {
+              "text": "Lorem ipsum",
+              "css": "",
+              "lang": "pl"
+            },
+            {
+              "text": "Lorem ipsum",
+              "css": "",
+              "lang": "en"
+            }
+          ]
+        },
+        {
+          "name": "Zasada3",
+          "values": [
+            {
+              "text": "Lorem ipsum",
+              "css": "",
+              "lang": "pl"
+            },
+            {
+              "text": "Lorem ipsum",
+              "css": "",
+              "lang": "en"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Strona2",
+      "variables": [
+        {
+          "name": "Krzyżowanie",
+          "values": [
+            {
+              "text": "Lorem ipsum",
+              "css": "",
+              "lang": "pl"
+            },
+            {
+              "text": "Lorem ipsum",
+              "css": "",
+              "lang": "en"
+            }
+          ]
+        },
+        {
+          "name": "Przycisk",
+          "values": [
+            {
+              "text": "Lorem ipsum",
+              "css": "",
+              "lang": "pl"
+            },
+            {
+              "text": "Lorem ipsum",
+              "css": "",
+              "lang": "en"
+            }
+          ]
+        },
+        {
+          "name": "Rok1",
+          "values": [
+            {
+              "text": "Lorem ipsum",
+              "css": "",
+              "lang": "pl"
+            },
+            {
+              "text": "Lorem ipsum",
+              "css": "",
+              "lang": "en"
+            }
+          ]
+        },
+        {
+          "name": "Rok2",
+          "values": [
+            {
+              "text": "Lorem ipsum",
+              "css": "",
+              "lang": "pl"
+            },
+            {
+              "text": "Lorem ipsum",
+              "css": "",
+              "lang": "en"
+            }
+          ]
+        },
+        {
+          "name": "Rok3",
+          "values": [
+            {
+              "text": "Lorem ipsum",
+              "css": "",
+              "lang": "pl"
+            },
+            {
+              "text": "Lorem ipsum",
+              "css": "",
+              "lang": "en"
+            }
+          ]
+        },
+        {
+          "name": "Rok4",
+          "values": [
+            {
+              "text": "Lorem ipsum",
+              "css": "",
+              "lang": "pl"
+            },
+            {
+              "text": "Lorem ipsum",
+              "css": "",
+              "lang": "en"
+            }
+          ]
+        },
+        {
+          "name": "Rok5",
+          "values": [
+            {
+              "text": "Lorem ipsum",
+              "css": "",
+              "lang": "pl"
+            },
+            {
+              "text": "Lorem ipsum",
+              "css": "",
+              "lang": "en"
+            }
+          ]
+        },
+        {
+          "name": "Ziarna",
+          "values": [
+            {
+              "text": "Lorem ipsum",
+              "css": "",
+              "lang": "pl"
+            },
+            {
+              "text": "Lorem ipsum",
+              "css": "",
+              "lang": "en"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Strona3",
+      "variables": [
+        {
+          "name": "Przycisk",
+          "values": [
+            {
+              "text": "Lorem ipsum",
+              "css": "",
+              "lang": "pl"
+            },
+            {
+              "text": "Lorem ipsum",
+              "css": "",
+              "lang": "en"
+            }
+          ]
+        },
+        {
+          "name": "Twój wynik",
+          "values": [
+            {
+              "text": "Lorem ipsum",
+              "css": "",
+              "lang": "pl"
+            },
+            {
+              "text": "Lorem ipsum",
+              "css": "",
+              "lang": "en"
+            }
+          ]
+        },
+        {
+          "name": "Wynik",
+          "values": [
+            {
+              "text": "Lorem ipsum",
+              "css": "",
+              "lang": "pl"
+            },
+            {
+              "text": "Lorem ipsum",
+              "css": "",
+              "lang": "en"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

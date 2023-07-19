@@ -17,6 +17,7 @@ public class TimePointsManager : MonoBehaviour
     [SerializeField] private GameObject activePanel;
     [SerializeField] private GameObject nextPanel;
     [SerializeField] private Transform bacteriaSpanwer;
+    [SerializeField] private Animation anim;
 
     private void Awake()
     {
@@ -45,13 +46,7 @@ public class TimePointsManager : MonoBehaviour
                 timeRemaining = 0;
                 timerIsRunning = false;
 
-                activePanel.SetActive(false);
-                nextPanel.SetActive(true);
-
-                while (bacteriaSpanwer.childCount > 0)
-                {
-                    DestroyImmediate(bacteriaSpanwer.GetChild(0).gameObject);
-                }
+                StartCoroutine(waitForAnim());
             }
         }
     }
@@ -68,5 +63,19 @@ public class TimePointsManager : MonoBehaviour
         allPoints += newPoints;
         pointText.text = allPoints.ToString();
         pointTextEndScreen.text = allPoints.ToString();
+    }
+
+    IEnumerator waitForAnim()
+    {
+        yield return new WaitForSeconds(0.24f);
+
+        activePanel.SetActive(false);
+        HighScoreController.Instance.AddNewScore(allPoints);
+        nextPanel.SetActive(true);
+
+        while (bacteriaSpanwer.childCount > 0)
+        {
+            DestroyImmediate(bacteriaSpanwer.GetChild(0).gameObject);
+        }
     }
 }
