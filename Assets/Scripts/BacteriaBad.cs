@@ -10,6 +10,11 @@ public class BacteriaBad : Bacteria
     protected override void Start()
     {
         base.Start();
+
+        if(big)
+            health = int.Parse(SettingsLoader.Instance.Settings.HpBigEnemy);
+        else
+            health = int.Parse(SettingsLoader.Instance.Settings.HpSmallEnemy);
     }
 
     protected override void FixedUpdate()

@@ -1,41 +1,56 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
+using System.IO;
 
 public class TranslationManager : MonoBehaviour
 {
-    [SerializeField] private TextAsset jsonFile;
+    public static TranslationManager Instance;
+    private Root jsonRoot;
 
     void Awake()
     {
-        Root jsonRoot = JsonUtility.FromJson<Root>(jsonFile.text);
-
-        if(jsonRoot == null)
+      //  TextAsset jsonFile = Resources.Load<TextAsset>(Application.streamingAssetsPath + "/" + "Texts");
+        Instance = this;
+        string path = Application.dataPath + "/" + "Texts.json";
+        if (File.Exists(path))
         {
-            Debug.Log("wow");
+            Debug.Log("Loading File");
+            string jsonString = File.ReadAllText(path);
+            jsonRoot = JsonUtility.FromJson<Root>(jsonString);
         }
-
-        Debug.Log(jsonRoot.categories.Length);
-
-        foreach(Category category in jsonRoot.categories)
+        else
         {
-            if(category.name == "Menu")
+            Debug.LogError("No File");
+        }
+    }
+
+    public string GetText(string category, string variable, string language)
+    {
+        foreach (Category c in jsonRoot.categories)
+        {
+            if (c.name == category)
             {
-                foreach (Variable variable in category.variables)
+                foreach (Variable var in c.variables)
                 {
-                    if (variable.name == "Tytu³")
+                    if (var.name == variable)
                     {
-                        foreach (Value value in variable.values)
+                        foreach (Value val in var.values)
                         {
-                            Debug.Log(value.text);
+                            if (val.lang == language)
+                            {
+                                return val.text;
+                            }
                         }
                     }
                 }
             }
         }
+        return "ERROR WRONG TRANSLATION CODE";
     }
 }
-
 
 [System.Serializable]
 public class Category

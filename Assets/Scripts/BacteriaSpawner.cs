@@ -18,6 +18,9 @@ public class BacteriaSpawner : MonoBehaviour
     void Start()
     {
         nextSpawnTime = Random.Range(minMaxSpawnRate.x, minMaxSpawnRate.y);
+
+        chanceOfGoodToBadSpawn = float.Parse(SettingsLoader.Instance.Settings.SpawnChanceOfGoodToBad);
+        chanceOfBigBadSpawnToSmall = float.Parse(SettingsLoader.Instance.Settings.SpawnChanceOfBigBad);
     }
 
     void Update()

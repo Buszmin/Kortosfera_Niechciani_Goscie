@@ -23,6 +23,9 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         startPos = transform.position;
+        speed = float.Parse(SettingsLoader.Instance.Settings.MovmentSpeed);
+        shootTimer = float.Parse(SettingsLoader.Instance.Settings.ShootTimer);
+        outlineTimer = float.Parse(SettingsLoader.Instance.Settings.CollectionTimer);
     }
 
     private void OnEnable()

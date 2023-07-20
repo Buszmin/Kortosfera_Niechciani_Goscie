@@ -24,6 +24,11 @@ public class TimePointsManager : MonoBehaviour
         Instance = this;
     }
 
+    private void Start()
+    {
+        timeStart = float.Parse(SettingsLoader.Instance.Settings.GameTime);
+    }
+
     private void OnEnable()
     {
         timerIsRunning = true;
