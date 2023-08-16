@@ -70,6 +70,14 @@ public class TimePointsManager : MonoBehaviour
         pointTextEndScreen.text = allPoints.ToString();
     }
 
+    public void ClearAllBacteria()
+    {
+        while (bacteriaSpanwer.childCount > 0)
+        {
+            DestroyImmediate(bacteriaSpanwer.GetChild(0).gameObject);
+        }
+    }
+
     IEnumerator waitForAnim()
     {
         yield return new WaitForSeconds(0.24f);
@@ -78,9 +86,6 @@ public class TimePointsManager : MonoBehaviour
         HighScoreController.Instance.AddNewScore(allPoints);
         nextPanel.SetActive(true);
 
-        while (bacteriaSpanwer.childCount > 0)
-        {
-            DestroyImmediate(bacteriaSpanwer.GetChild(0).gameObject);
-        }
+        ClearAllBacteria();
     }
 }

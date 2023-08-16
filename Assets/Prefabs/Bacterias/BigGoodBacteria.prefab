@@ -143,6 +143,7 @@ MonoBehaviour:
   hitSprite: {fileID: 21300000, guid: 27305ba4ad60f2a43a2451d02df6c10b, type: 3}
   plusPointsPrefab: {fileID: 6032172154609810050, guid: d8f5564344b04cc4eac333c91012cad8, type: 3}
   minusPointsPrefab: {fileID: 225773478871733716, guid: b71f61259eb4a2646852c4e3d0313da1, type: 3}
+  big: 1
 --- !u!60 &4603807343320837989
 PolygonCollider2D:
   m_ObjectHideFlags: 0

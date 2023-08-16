@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class BacteriaGood : Bacteria
-{   protected override void Start()
+{
+    [SerializeField] private bool big;
+    protected override void Start()
     {
         base.Start();
     }
@@ -23,6 +25,25 @@ public class BacteriaGood : Bacteria
             point.transform.position = transform.position;
             point.GetComponent<Points>().Init(15);
             spriteRenderer.sprite = hitSprite;
+        }
+
+        if (collision.GetComponent<Bullet>() != null)
+        {
+            Destroy(collision.gameObject);
+
+
+            Die();
+            GameObject point = Instantiate(minusPointsPrefab);
+            point.transform.position = transform.position;
+
+            if (big)
+            {
+                point.GetComponent<Points>().Init(-10);
+            }
+            else
+            {
+                point.GetComponent<Points>().Init(-5);
+            }
         }
     }
 }

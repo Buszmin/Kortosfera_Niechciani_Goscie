@@ -8,44 +8,54 @@ public class PanelController : MonoBehaviour
     [SerializeField] private GameObject activePanel;
     [SerializeField] private GameObject nextPanel;
 
-    [SerializeField] private bool isLastPanel;
+    //[SerializeField] private bool isLastPanel;
     [SerializeField] private GameObject firstPanel;
     [SerializeField] private Animation anim;
+    [SerializeField] private bool isGamePanel;
+
+    [SerializeField] private float restartTimer = 10f;
 
     private void OnEnable()
     {
+        restartTimer = 10f;
         StartCoroutine(waitToUnlock()); 
-
-        if(isLastPanel)
-        {
-            StartCoroutine(waitToRestart());
-        }
     }
 
     private void Update()
     {
-        if (Input.anyKey && skipUnlocked)
+        restartTimer -= Time.deltaTime;
+
+        if (Input.anyKey)
         {
-            anim.Play(anim.clip.name);
-            StopAllCoroutines();
-            StartCoroutine(waitForAnim());
+            restartTimer = 10f;
+
+            if (skipUnlocked)
+            {
+                anim.Play(anim.clip.name);
+                StopAllCoroutines();
+                StartCoroutine(waitForAnim());
+            }
+        }
+
+        if(restartTimer<=0)
+        {
+            if (activePanel != firstPanel)
+            {
+                Debug.Log("Restart");
+                anim.Play(anim.clip.name);
+                StartCoroutine(waitforRestart());
+            }
         }
     }
 
     IEnumerator waitToUnlock()
     {
         yield return new WaitForSeconds(2f);
-        skipUnlocked = true;
-    }
 
-    IEnumerator waitToRestart()
-    {
-        yield return new WaitForSeconds(30f);
-
-        skipUnlocked = false;
-        activePanel.SetActive(false);
-        firstPanel.SetActive(true);
-        StopAllCoroutines();
+        if (!isGamePanel)
+        {
+            skipUnlocked = true;
+        }
     }
 
     IEnumerator waitForAnim()
@@ -55,5 +65,19 @@ public class PanelController : MonoBehaviour
         skipUnlocked = false;
         activePanel.SetActive(false);
         nextPanel.SetActive(true);
+
+        StopAllCoroutines();
+    }
+
+    IEnumerator waitforRestart()
+    {
+        yield return new WaitForSeconds(0.24f);
+
+        skipUnlocked = false;
+        activePanel.SetActive(false);
+        firstPanel.SetActive(true);
+        TimePointsManager.Instance.ClearAllBacteria();
+
+        StopAllCoroutines();
     }
 }

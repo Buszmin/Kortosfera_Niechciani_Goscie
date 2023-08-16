@@ -37,7 +37,7 @@ public class PlayerController : MonoBehaviour
 
     void FixedUpdate()
     {
-        if(Input.GetKey(KeyCode.RightArrow))
+        if(Input.GetKey(KeyCode.RightArrow) || Input.GetAxis("Horizontal") > 0)
         {
             if (player.transform.position.x < movmentRange)
             {
@@ -45,7 +45,7 @@ public class PlayerController : MonoBehaviour
             }
         }
 
-        if (Input.GetKey(KeyCode.LeftArrow))
+        if (Input.GetKey(KeyCode.LeftArrow) || Input.GetAxis("Horizontal") < 0)
         {
             if (player.transform.position.x > -movmentRange)
             {
@@ -53,7 +53,7 @@ public class PlayerController : MonoBehaviour
             }
         }
 
-        if (Input.GetKey(KeyCode.A))
+        if (Input.GetKey(KeyCode.A) || Input.GetButton("Fire1")) 
         {
             if (canShoot)
             {
@@ -61,7 +61,7 @@ public class PlayerController : MonoBehaviour
             }
         }
 
-        if (Input.GetKey(KeyCode.D))
+        if (Input.GetKey(KeyCode.D) || Input.GetButton("Fire2"))
         {
             if (canCollect)
             {
