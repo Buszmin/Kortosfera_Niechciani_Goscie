@@ -14,7 +14,13 @@ public class TranslationManager : MonoBehaviour
     {
       //  TextAsset jsonFile = Resources.Load<TextAsset>(Application.streamingAssetsPath + "/" + "Texts");
         Instance = this;
+        
         string path = Application.dataPath + "/" + "Texts.json";
+
+#if !UNITY_EDITOR
+            path = Path.GetDirectoryName(System.Diagnostics.Process.GetCurrentProcess().MainModule.FileName) + "/Configs/Texts" + "/" + "Texts.json";
+#endif
+
         if (File.Exists(path))
         {
             Debug.Log("Loading File");

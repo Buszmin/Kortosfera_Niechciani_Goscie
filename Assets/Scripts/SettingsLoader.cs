@@ -12,6 +12,11 @@ public class SettingsLoader : MonoBehaviour
     {
         Instance = this;
         string path = Application.dataPath + "/" + "GameSettings.json";
+
+#if !UNITY_EDITOR
+            path = Path.GetDirectoryName(System.Diagnostics.Process.GetCurrentProcess().MainModule.FileName)  + "/Configs/Configs"  + "/" + "GameSettings.json";
+#endif
+
         if (File.Exists(path))
         {
             Debug.Log("Loading File");

@@ -1,0 +1,219 @@
+{
+  "categories": [
+    {
+      "name": "Przyciski",
+      "variables": [
+        {
+          "name": "Czerwony",
+          "values": [
+            {
+              "text": "Lorem ipsum",
+              "css": "",
+              "lang": "pl"
+            },
+            {
+              "text": "Lorem ipsum",
+              "css": "",
+              "lang": "en"
+            }
+          ]
+        },
+        {
+          "name": "Zielony",
+          "values": [
+            {
+              "text": "Lorem ipsum",
+              "css": "",
+              "lang": "pl"
+            },
+            {
+              "text": "Lorem ipsum",
+              "css": "",
+              "lang": "en"
+            }
+          ]
+        },
+        {
+          "name": "Korbka",
+          "values": [
+            {
+              "text": "Lorem ipsum",
+              "css": "",
+              "lang": "pl"
+            },
+            {
+              "text": "Lorem ipsum",
+              "css": "",
+              "lang": "en"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Strona1",
+      "variables": [
+        {
+          "name": "Nagłówek",
+          "values": [
+            {
+              "text": "Lorem ipsum",
+              "css": "",
+              "lang": "pl"
+            },
+            {
+              "text": "Lorem ipsum",
+              "css": "",
+              "lang": "en"
+            }
+          ]
+        },
+        {
+          "name": "Start",
+          "values": [
+            {
+              "text": "START - GRY - WCIŚNIJ PRZYCISK",
+              "css": "",
+              "lang": "pl"
+            },
+            {
+              "text": "Lorem ipsum",
+              "css": "",
+              "lang": "en"
+            }
+          ]
+        },
+        {
+          "name": "Tekst1",
+          "values": [
+            {
+              "text": "Lorem ipsum",
+              "css": "",
+              "lang": "pl"
+            },
+            {
+              "text": "Lorem ipsum",
+              "css": "",
+              "lang": "en"
+            }
+          ]
+        },
+        {
+          "name": "Tekst2",
+          "values": [
+            {
+              "text": "Lorem ipsum",
+              "css": "",
+              "lang": "pl"
+            },
+            {
+              "text": "Lorem ipsum",
+              "css": "",
+              "lang": "en"
+            }
+          ]
+        },
+        {
+          "name": "Tekst3",
+          "values": [
+            {
+              "text": "Lorem ipsum",
+              "css": "",
+              "lang": "pl"
+            },
+            {
+              "text": "Lorem ipsum",
+              "css": "",
+              "lang": "en"
+            }
+          ]
+        },
+        {
+          "name": "Tekst4",
+          "values": [
+            {
+              "text": "Lorem ipsum",
+              "css": "",
+              "lang": "pl"
+            },
+            {
+              "text": "Lorem ipsum",
+              "css": "",
+              "lang": "en"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Wynik",
+      "variables": [
+        {
+          "name": "Czas",
+          "values": [
+            {
+              "text": "Czas",
+              "css": "",
+              "lang": "pl"
+            },
+            {
+              "text": "Time",
+              "css": "",
+              "lang": "en"
+            }
+          ]
+        },
+        {
+          "name": "Punkty",
+          "values": [
+            {
+              "text": "Punkty",
+              "css": "",
+              "lang": "pl"
+            },
+            {
+              "text": "Point",
+              "css": "",
+              "lang": "en"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Strona3",
+      "variables": [
+        {
+          "name": "Nagłówek",
+          "values": [
+            {
+              "text": "Lorem ipsum",
+              "css": "",
+              "lang": "pl"
+            },
+            {
+              "text": "Lorem ipsum",
+              "css": "",
+              "lang": "en"
+            }
+          ]
+        },
+        {
+          "name": "Tekst",
+          "values": [
+            {
+              "text": "Lorem ipsum",
+              "css": "",
+              "lang": "pl"
+            },
+            {
+              "text": "Lorem ipsum",
+              "css": "",
+              "lang": "en"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
